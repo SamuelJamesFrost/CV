@@ -1,0 +1,73 @@
+\documentclass[a4,10pt]{article}
+\usepackage[margin=1.7cm]{geometry}
+\setlength{\parindent}{0pt}
+\pagenumbering{gobble}
+\usepackage{ulem}
+\usepackage{contour}
+\usepackage{lipsum}
+
+\usepackage{xcolor}
+\definecolor{grey}{rgb}{0.25,0.25,0.25}
+\usepackage[colorlinks = true,
+            linkcolor = grey,
+            urlcolor  = grey,
+            citecolor = grey,
+            anchorcolor = grey]{hyperref}
+
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+
+\newcommand{\ul}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+\newcommand{\link}[2]{\href{#1}{\ul{\texttt{#2}}}}
+
+\newcommand{\rcl}[3]{%
+    \makebox[0pt][l]{\parbox{0.33\textwidth}{#1}}%
+    \makebox[\textwidth][c]{#2}%
+    \makebox[0pt][r]{\parbox{0.33\textwidth}{\raggedleft #3}}%
+}
+
+\begin{document}
+    \rcl%
+        {Phone: +44\;7982\;402448\\Email: \href{mailto:me@samuelfrost.co.uk}{\texttt{me@samuelfrost.co.uk}}}%
+        {\Large\scshape Samuel~J.~Frost}%
+        {Nottingham,\\United Kingdom}
+
+    \vspace{0.75cm}
+    \makebox[\textwidth][c]{\parbox{0.75\textwidth}{I am Samuel Frost, an undergraduate student in chemistry and molecular physics. Currently very interested in recent developments in the energy industry, seeking experience in the field with the desire to contribute greatly to the growing energy sector in Britain.}}
+
+    \section*{Education}
+    \begin{itemize}
+        \item \textbf{University of Nottingham.} MSci. in \textit{Chemistry and Molecular Physics,} graduating in 2023 and predicted a first.
+        \begin{itemize}
+            \item Gained practical lab experience in both chemistry and physics, working with ultra-high vacuums for low tolerance analysis using mass-spectrometry \& TDP. Comfortable running IR, UV-Vis, and NMR spectroscopy. Familiar with COSHH forms and choosing appropriate PPE.
+            \item Interfacing with an API to collect physical data and analysing it in real time through Python.
+            \item My 3\textsuperscript{rd} year project is a study of Magnetic Time Crystals through computer simulations, using Monte Carlo methods, which will inform current research at the university.
+            \item Research project on Density Functional Theory, a computational quantum mechanical modelling method used in all areas concerning chemical systems.
+        \end{itemize}
+    \end{itemize}
+    \section*{Experience}
+    \begin{itemize}
+        \item \textbf{Teaching.} Taught an extra-curricular programming class to pupils in years 7-11, concerning making games, graphics, and visualisations in Javascript. 
+        \item \textbf{Work.} Worked in a customer facing position at a restaurant, in charge of training new employees and managing inventory. I've also indepdently run a freelance web development business. 
+    \end{itemize}
+    \section*{Skills \& Hobbies}
+    \begin{itemize}
+        \item \textbf{Languages.} Self-taught B2 proficiency in Norwegian, beginner student of Mandarin at university.
+        \item \textbf{Technology.} Proficient in Python, C, C++, and HTML5/Javascript, applied in data science, physical simulations, and programming microcontrollers. I maintain multiple Linux systems, including web servers.
+        \item \textbf{Music.} Grade 7 in classical guitar. Formerly part of a guitar ensemble.
+        \item \textbf{Hobbies.} I enjoy cycling, hiking, wild camping, and knitting. I am currently learning carpentry and wood carving. 
+    \end{itemize}
+    \vfill
+
+    \rcl%
+        {LinkedIn: \link{https://www.linkedin.com/in/samuel-james-frost}{linkedin.com/in/samuel-james-frost}\\
+         GitHub: \link{https://github.com/pcysf6}{github.com/pcysf6}}%
+        {}%
+        {Website: \link{https://samuelfrost.co.uk/}{samuelfrost.co.uk}}
+
+
+\end{document}
